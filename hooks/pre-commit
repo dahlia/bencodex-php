@@ -1,0 +1,36 @@
+#!/bin/bash
+set -e
+
+if ! command -v php > /dev/null; then
+  echo "Failed to find the php command." > /dev/stderr
+  exit 1
+fi
+
+if ! command -v composer > /dev/null; then
+  download_url=https://getcomposer.org/download/latest-stable/composer.phar
+  download_path=vendor/bin/composer
+  if ! [[ -f "$download_path" ]]; then
+    mkdir -p "$(dirname "$download_path")"
+    if command -v curl > /dev/null; then
+      curl -o "$download_path" "$download_url"
+    elif command -v wget > /dev/null; then
+      wget -O "$download_path" "$download_url"
+    else
+      # shellcheck disable=SC2016
+      php -r '$argv = $_SERVER["argv"]; copy($argv[1], $argv[2]);' \
+        "$download_url" \
+        "$download_path"
+    fi
+    chmod +x "$download_path"
+  fi
+  composer() {
+    php "$download_path" "$@"
+  }
+fi
+
+if ! [[ -f vendor/bin/php-cs-fixer && -f vendor/bin/phpunit ]]; then
+  composer install
+fi
+
+vendor/bin/php-cs-fixer fix --dry-run --verbose --diff
+vendor/bin/phpunit test
