@@ -1,6 +1,6 @@
 <?php
 
-namespace Bencodex;
+namespace Bencodex\Writers;
 
 /**
  * An interface to write a byte string (which can be quite long) in

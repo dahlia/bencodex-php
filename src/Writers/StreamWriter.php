@@ -1,6 +1,6 @@
 <?php
 
-namespace Bencodex;
+namespace Bencodex\Writers;
 
 /**
  * A writer that put the given byte string into a stream, which usually refers

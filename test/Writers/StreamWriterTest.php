@@ -1,9 +1,9 @@
 <?php
 
-namespace Bencode\Tests;
+namespace Bencodex\Tests\Writers;
 
-use Bencodex\StreamWriter;
 use Bencodex\Test\TestUtils;
+use Bencodex\Writers\StreamWriter;
 use PHPUnit\Framework\TestCase;
 
 class StreamWriterTest extends TestCase

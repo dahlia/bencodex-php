@@ -1,9 +1,9 @@
 <?php
 
-namespace Bencodex\Tests;
+namespace Bencodex\Tests\Writers;
 
-use Bencodex\MemoryWriter;
 use Bencodex\Test\TestUtils;
+use Bencodex\Writers\MemoryWriter;
 use PHPUnit\Framework\TestCase;
 
 class MemoryWriterTest extends TestCase

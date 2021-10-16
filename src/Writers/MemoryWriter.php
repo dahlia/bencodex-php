@@ -1,6 +1,6 @@
 <?php
 
-namespace Bencodex;
+namespace Bencodex\Writers;
 
 /**
  * A writer that copies the given byte string into an in-memory buffer and
