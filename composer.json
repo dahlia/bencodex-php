@@ -22,7 +22,11 @@
     "source": "https://github.com/dahlia/bencodex-php"
   },
   "require": {
-    "php": ">=5.4.0"
+    "php": ">=5.4.0",
+    "symfony/polyfill-php70": "<=1.19.0"
+  },
+  "require-dev": {
+    "phpunit/phpunit": ">=4.8.36"
   },
   "autoload": {
     "psr-0": {

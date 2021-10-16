@@ -1,0 +1,5 @@
+*.iws
+.*.cache
+.idea/
+composer.lock
+vendor/
