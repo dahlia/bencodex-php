@@ -37,11 +37,11 @@
     ],
     "psr-0": {
       "Bencodex\\": "src/",
-      "Bencodex\\Test\\": "test/"
+      "Bencodex\\Tests\\": "tests/"
     },
     "psr-4": {
       "Bencodex\\": "src/",
-      "Bencodex\\Test\\": "test/"
+      "Bencodex\\Tests\\": "tests/"
     }
   }
 }

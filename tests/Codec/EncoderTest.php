@@ -1,9 +1,9 @@
 <?php
 
-namespace Bencodex\Test\Codec;
+namespace Bencodex\Tests\Codec;
 
 use Bencodex\Codec\Encoder;
-use Bencodex\Test\TestUtils;
+use Bencodex\Tests\TestUtils;
 use Bencodex\Writers\MemoryWriter;
 use PHPUnit\Framework\TestCase;
 

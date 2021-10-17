@@ -2,7 +2,7 @@
 
 namespace Bencodex\Tests\Writers;
 
-use Bencodex\Test\TestUtils;
+use Bencodex\Tests\TestUtils;
 use Bencodex\Writers\StreamWriter;
 use PHPUnit\Framework\TestCase;
 

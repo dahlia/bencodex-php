@@ -1,6 +1,6 @@
 <?php
 
-namespace Bencodex\Test\Codec;
+namespace Bencodex\Tests\Codec;
 
 use PHPUnit\Framework\TestCase;
 
