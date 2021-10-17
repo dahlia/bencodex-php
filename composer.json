@@ -23,6 +23,7 @@
   },
   "require": {
     "php": ">=5.4.0",
+    "ext-iconv": "*",
     "symfony/polyfill-php70": "<=1.19.0"
   },
   "require-dev": {
@@ -30,6 +31,9 @@
     "friendsofphp/php-cs-fixer": ">=1.13.3"
   },
   "autoload": {
+    "files": [
+      "src/Codec/functions.php"
+    ],
     "psr-0": {
       "Bencodex\\": "src/",
       "Bencodex\\Test\\": "test/"

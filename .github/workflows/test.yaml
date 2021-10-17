@@ -20,6 +20,7 @@ jobs:
     - uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-version }}
+        extensions: iconv
         tools: composer
     - uses: actions/checkout@v2
     - name: composer install
@@ -29,7 +30,7 @@ jobs:
     - name: phpunit
       run: |
         vendor/bin/phpunit --version
-        vendor/bin/phpunit test
+        vendor/bin/phpunit
     - name: php-cs-fixer fix
       run: |
         vendor/bin/php-cs-fixer --version

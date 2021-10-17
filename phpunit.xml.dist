@@ -1,0 +1,20 @@
+<phpunit xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="vendor/phpunit/phpunit/phpunit.xsd"
+         failOnRisky="true"
+         failOnWarning="true">
+  <testsuites>
+    <testsuite name="Test suite">
+      <directory>test</directory>
+    </testsuite>
+  </testsuites>
+  <php>
+    <ini name="display_errors" value="on"/>
+    <ini name="display_startup_errors" value="on"/>
+    <ini name="error_reporting" value="32767"/> <!-- E_ALL = 32767 -->
+  </php>
+  <groups>
+    <exclude>
+      <group>vendor</group>
+    </exclude>
+  </groups>
+</phpunit>
