@@ -36,3 +36,23 @@ jobs:
         vendor/bin/php-cs-fixer --version
         vendor/bin/php-cs-fixer fix --dry-run --verbose --diff
       if: "!startsWith(matrix.php-version, '5.')"
+
+  doc:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: shivammathur/setup-php@v2
+      with:
+        php-version: 8.0
+        extensions: iconv
+        tools: composer
+    - uses: actions/checkout@v2
+    - run: composer install
+    - run: |
+        curl -L -o vendor/bin/phpDocumentor \
+          https://phpdoc.org/phpDocumentor.phar
+        chmod +x vendor/bin/phpDocumentor
+    - run: vendor/bin/phpDocumentor
+    - uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: docs

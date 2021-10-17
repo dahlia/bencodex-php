@@ -1,5 +1,7 @@
 *.iws
 .*.cache
 .idea/
+.phpdoc/cache/
 composer.lock
+docs/
 vendor/

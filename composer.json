@@ -18,6 +18,7 @@
     }
   ],
   "support": {
+    "docs": "https://dahlia.github.io/bencodex-php/",
     "issues": "https://github.com/dahlia/bencodex-php/issues",
     "source": "https://github.com/dahlia/bencodex-php"
   },

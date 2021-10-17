@@ -71,6 +71,7 @@ final class Encoder
      *                                  Note that it can be treated as binary
      *                                  data if a PHP string is not a valid
      *                                  sequence of the specified text encoding.
+     * @return void
      */
     public function setTextEncoding($textEncoding)
     {
@@ -113,6 +114,7 @@ final class Encoder
      *                                 Note that it can be treated as binary
      *                                 data if a PHP string is not a valid
      *                                 sequence of the specified text encoding.
+     * @return void
      */
     public function setKeyEncoding($keyEncoding)
     {
@@ -139,6 +141,7 @@ final class Encoder
      *                       written.  In order to get an in-memory string,
      *                       use {@see MemoryWriter}.
      * @param mixed $value The value to be encoded in Bencodex.
+     * @return void
      */
     public function encode(Writer $writer, $value)
     {
