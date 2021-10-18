@@ -27,21 +27,28 @@
     "ext-iconv": "*",
     "symfony/polyfill-php70": "<=1.19.0"
   },
-  "require-dev": {
-    "phpunit/phpunit": ">=4.8.36",
-    "friendsofphp/php-cs-fixer": ">=1.13.3"
-  },
   "autoload": {
     "files": [
       "src/functions.php",
       "src/Codec/functions.php"
     ],
     "psr-0": {
-      "Bencodex\\": "src/",
+      "Bencodex\\": "src/"
+    },
+    "psr-4": {
+      "Bencodex\\": "src/"
+    }
+  },
+  "require-dev": {
+    "ext-json": "*",
+    "phpunit/phpunit": ">=4.8.36",
+    "friendsofphp/php-cs-fixer": ">=1.13.3"
+  },
+  "autoload-dev": {
+    "psr-0": {
       "Bencodex\\Tests\\": "tests/"
     },
     "psr-4": {
-      "Bencodex\\": "src/",
       "Bencodex\\Tests\\": "tests/"
     }
   }

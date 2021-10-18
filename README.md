@@ -3,12 +3,35 @@ Bencodex reader/writer for PHP
 
 [![GitHub Actions Status][]][GitHub Actions]
 
-[GitHub Actions Status]: https://github.com/dahlia/bencodex-php/actions/workflows/test.yaml/badge.svg
-[GitHub Actions]: https://github.com/dahlia/bencodex-php/actions/workflows/test.yaml
+[GitHub Actions Status]: https://github.com/dahlia/bencodex-php/actions/workflows/build.yaml/badge.svg
+[GitHub Actions]: https://github.com/dahlia/bencodex-php/actions/workflows/build.yaml
 
 This package implements [Bencodex] serialization format which extends
-[Bencoding].
+[Bencoding].  Complianet with Bencodex 1.2.
 
+
+Type correspondences
+--------------------
+
+| PHP                                    | Bencodex             |
+|----------------------------------------|----------------------|
+| Null                                   | Null                 |
+| Boolean                                | Boolean              |
+| Integer                                | Integer              |
+| Double<sup>†</sup>                     | Integer (truncated)  |
+| String which can be decoded as Unicode | Text<sup>‡</sup>     |
+| String otherwise                       | Binary<sup>‡</sup>   |
+| List-like array<sup>※</sup>            | List                 |
+| Map-like array<sup>†</sup>             | Dictionary           |
+| Object                                 | Dictionary           |
+
+*† One-way types only available for encoding.*
+
+*‡ One-way types only available for decoding.*
+
+*※ Determined by [`array_is_list()` function][array_is_list].*
+
+[array_is_list]: https://www.php.net/manual/en/function.array-is-list
 
 Usage
 -----

@@ -1,4 +1,4 @@
-name: test
+name: build
 on: [push, pull_request]
 
 jobs:
@@ -20,9 +20,11 @@ jobs:
     - uses: shivammathur/setup-php@v2
       with:
         php-version: ${{ matrix.php-version }}
-        extensions: iconv
+        extensions: iconv, json
         tools: composer
     - uses: actions/checkout@v2
+      with:
+        submodules: recursive
     - name: composer install
       run: |
         composer --version

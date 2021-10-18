@@ -41,7 +41,9 @@ class StreamWriter implements Writer
     public function write($bytes)
     {
         if (!is_string($bytes)) {
-            throw new \TypeError('Required a byte string.');
+            throw new \TypeError(
+                'Required a byte string, not ' . gettype($bytes) . '.'
+            );
         }
         if (!empty($bytes)) {
             fwrite($this->handle, $bytes);

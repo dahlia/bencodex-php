@@ -1,6 +1,15 @@
 #!/bin/bash
 set -e
 
+if ! command -v git > /dev/null; then
+  echo "Failed to find the git command." > /dev/stderr
+  exit 1
+fi
+
+if [[ ! -d tests/spec/.git ]]; then
+  git submodule update --init --recursive
+fi
+
 if ! command -v php > /dev/null; then
   echo "Failed to find the php command." > /dev/stderr
   exit 1
