@@ -91,6 +91,11 @@ Search.appendIndex(
             "summary": "The\u0020exception\u0020thrown\u0020when\u0020the\u0020configured\u0020text\u0020encoding\u0020is\u0020invalid\u0020or\nunsupported\u0020by\u0020iconv.",
             "url": "classes/Bencodex-Codec-TextEncodingError.html"
         },                {
+            "fqsen": "\\Bencodex\\encode\u0028\u0029",
+            "name": "encode",
+            "summary": "Encodes\u0020the\u0020given\u0020value\u0020into\u0020Bencodex\u0020data.",
+            "url": "namespaces/bencodex.html#function_encode"
+        },                {
             "fqsen": "\\Bencodex\\Writers\\MemoryWriter",
             "name": "MemoryWriter",
             "summary": "A\u0020writer\u0020that\u0020copies\u0020the\u0020given\u0020byte\u0020string\u0020into\u0020an\u0020in\u002Dmemory\u0020buffer\u0020and\nallows\u0020to\u0020get\u0020the\u0020written\u0020byte\u0020string\u0020from\u0020the\u0020buffer.",

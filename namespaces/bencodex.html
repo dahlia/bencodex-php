@@ -106,10 +106,117 @@
 
 
 
+<h3 id="toc">
+    Table of Contents
+    <a href="#toc" class="headerlink"><i class="fas fa-link"></i></a>
+</h3>
+
+<dl class="phpdocumentor-table-of-contents">
+                        <dt class="phpdocumentor-table-of-contents__entry -function -">
+    <a href="namespaces/bencodex.html#function_encode">encode()</a>
+    <span>
+                        &nbsp;: string    </span>
+</dt>
+<dd>Encodes the given value into Bencodex data.</dd>
+
+    </dl>
 
         
 
-        
+            <section class="phpdocumentor-functions">
+        <h3 class="phpdocumentor-elements__header" id="functions">
+            Functions
+            <a href="namespaces/bencodex.html#functions" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article class="phpdocumentor-element -function - ">
+    <h4 class="phpdocumentor-element__name" id="function_encode">
+        encode()
+        <a href="namespaces/bencodex.html#function_encode" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/functions.php"><a href="files/src-functions.html"><abbr title="src/functions.php">functions.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">28</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Encodes the given value into Bencodex data.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility"></span>
+                <span class="phpdocumentor-signature__name">encode</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$textEncoding</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$keyEncoding</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+        <section class="phpdocumentor-description"><p>This is a facade of <a href="classes/Bencodex-Codec-Encoder.html"><abbr title="\Bencodex\Codec\Encoder">Encoder</abbr></a> class.</p>
+</section>
+
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$value</span>
+                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The value to be encoded in Bencodex.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$textEncoding</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Determines what text encoding the PHP
+strings you want to encode are in.
+If the PHP strings are binary data and
+not Unicode text, then this should be
+set to null.  UTF-8 by default.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$keyEncoding</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Determines what text encoding the string
+keys of the PHP arrays you want to encode
+are in. If the PHP string keys are binary
+keys and not Unicode keys, they should be
+set to null.  UTF-8 by default.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><a href="classes/Bencodex-Codec-TextEncodingError.html"><abbr title="\Bencodex\Codec\TextEncodingError">TextEncodingError</abbr></a></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>Thrown when the given text encoding is invalid
+or unsupported by iconv.</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">string</span>
+            &mdash;
+            <section class="phpdocumentor-description"><p>The encoded Bencodex data.</p>
+</section>
+
+    
+</article>
+            </section>
+
     </article>
                 <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
     <section class="phpdocumentor-search-results__dialog">

@@ -90,37 +90,17 @@
                     <ul class="phpdocumentor-breadcrumbs">
     </ul>
 
-    <article class="phpdocumentor-element -package">
-        <h2 class="phpdocumentor-content__title">Bencodex</h2>
+    <article class="phpdocumentor-element -file">
+        <h2 class="phpdocumentor-content__title">functions.php</h2>
 
         
+    <section class="phpdocumentor-description"></section>
 
-<h3 id="interfaces_class_traits">
-    Interfaces, Classes and Traits
-    <a href="#interfaces_class_traits" class="headerlink"><i class="fas fa-link"></i></a>
-</h3>
 
-<dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Bencodex-Writers-Writer.html"><abbr title="\Bencodex\Writers\Writer">Writer</abbr></a></dt>
-        <dd>An interface to write a byte string (which can be quite long) in
-separated multiple chunks.</dd>
-    
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Bencodex-Codec-Encoder.html"><abbr title="\Bencodex\Codec\Encoder">Encoder</abbr></a></dt>
-        <dd>Encodes PHP values into corresponding Bencodex data.</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Bencodex-Codec-TextEncodingError.html"><abbr title="\Bencodex\Codec\TextEncodingError">TextEncodingError</abbr></a></dt>
-        <dd>The exception thrown when the configured text encoding is invalid or
-unsupported by iconv.</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Bencodex-Codec-TextEncodingError.html"><abbr title="\Bencodex\Codec\TextEncodingError">TextEncodingError</abbr></a></dt>
-        <dd>The exception thrown when the configured text encoding is invalid or
-unsupported by iconv.</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\Writers\MemoryWriter">MemoryWriter</abbr></a></dt>
-        <dd>A writer that copies the given byte string into an in-memory buffer and
-allows to get the written byte string from the buffer.</dd>
-            <dt class="phpdocumentor-table-of-contents__entry -class"><a href="classes/Bencodex-Writers-StreamWriter.html"><abbr title="\Bencodex\Writers\StreamWriter">StreamWriter</abbr></a></dt>
-        <dd>A writer that put the given byte string into a stream, which usually refers
-to a file.</dd>
-    
-    </dl>
+
+
+
+
 
 
 <h3 id="toc">
@@ -130,20 +110,6 @@ to a file.</dd>
 
 <dl class="phpdocumentor-table-of-contents">
                         <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="namespaces/bencodex-codec.html#function_validateTextEncoding">validateTextEncoding()</a>
-    <span>
-                        &nbsp;: bool    </span>
-</dt>
-<dd>Validates if the given text encoding is valid and supported by iconv.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="namespaces/bencodex-codec.html#function_array_is_list">array_is_list()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -function -">
     <a href="namespaces/bencodex.html#function_encode">encode()</a>
     <span>
                         &nbsp;: string    </span>
@@ -152,94 +118,15 @@ to a file.</dd>
 
     </dl>
 
+
+
         
 
             <section class="phpdocumentor-functions">
         <h3 class="phpdocumentor-elements__header" id="functions">
             Functions
-            <a href="packages/Bencodex.html#functions" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="files/src-functions.html#functions" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
-                    <article class="phpdocumentor-element -function - ">
-    <h4 class="phpdocumentor-element__name" id="function_validateTextEncoding">
-        validateTextEncoding()
-        <a href="namespaces/bencodex-codec.html#function_validateTextEncoding" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/functions.php"><a href="files/src-codec-functions.html"><abbr title="src/Codec/functions.php">functions.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">10</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Validates if the given text encoding is valid and supported by iconv.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">validateTextEncoding</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$textEncoding</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">bool</span></code>
-
-    
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$textEncoding</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>A text encoding name to check.</p>
-</section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">bool</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>True if the given text encoding is valid.</p>
-</section>
-
-    
-</article>
-                    <article class="phpdocumentor-element -function - ">
-    <h4 class="phpdocumentor-element__name" id="function_array_is_list">
-        array_is_list()
-        <a href="namespaces/bencodex-codec.html#function_array_is_list" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/functions.php"><a href="files/src-codec-functions.html"><abbr title="src/Codec/functions.php">functions.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">24</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">array_is_list</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;&nbsp;</span><span class="phpdocumentor-signature__argument__name">$array</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
-    <dl class="phpdocumentor-argument-list">
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$array</span>
-                : <span class="phpdocumentor-signature__argument__return-type">array&lt;string|int, mixed&gt;</span>
-                            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"></section>
-
-            </dd>
-            </dl>
-
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
                     <article class="phpdocumentor-element -function - ">
     <h4 class="phpdocumentor-element__name" id="function_encode">
         encode()
@@ -343,7 +230,7 @@ or unsupported by iconv.</p>
 </section>
             </div>
         </div>
-        <a href="packages/Bencodex.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="files/src-functions.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
