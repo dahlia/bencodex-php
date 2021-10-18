@@ -44,6 +44,8 @@ final class Encoder
      *                                 are in. If the PHP string keys are binary
      *                                 keys and not Unicode keys, they should be
      *                                 set to null.  UTF-8 by default.
+     * @throws TextEncodingError Thrown when the given text encoding is invalid
+     *                           or unsupported by iconv.
      */
     public function __construct($textEncoding = 'utf-8', $keyEncoding = 'utf-8')
     {
@@ -72,6 +74,8 @@ final class Encoder
      *                                  data if a PHP string is not a valid
      *                                  sequence of the specified text encoding.
      * @return void
+     * @throws TextEncodingError Thrown when the given text encoding is invalid
+     *                           or unsupported by iconv.
      */
     public function setTextEncoding($textEncoding)
     {
@@ -115,6 +119,8 @@ final class Encoder
      *                                 data if a PHP string is not a valid
      *                                 sequence of the specified text encoding.
      * @return void
+     * @throws TextEncodingError Thrown when the given text encoding is invalid
+     *                           or unsupported by iconv.
      */
     public function setKeyEncoding($keyEncoding)
     {

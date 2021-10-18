@@ -33,6 +33,7 @@
   },
   "autoload": {
     "files": [
+      "src/functions.php",
       "src/Codec/functions.php"
     ],
     "psr-0": {
