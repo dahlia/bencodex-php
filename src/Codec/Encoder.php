@@ -190,16 +190,19 @@ final class Encoder
                     $this->encodeDictionary($writer, $value);
                 }
                 break;
+            case 'object':
+                $this->encodeDictionary($writer, $value);
+                break;
             default:
-                $typeName = $type === 'object' ? get_class($value) : $type;
                 throw new \TypeError(
-                    "The type cannot be serialized into Bencodex: $typeName."
+                    "The type cannot be serialized into Bencodex: $type."
                 );
         }
     }
 
     public function encodeDictionary(Writer $writer, $dictionary)
     {
+        settype($dictionary, 'array');
         $writer->write('d');
         $binKeys = [];
         $unicodeKeys = [];

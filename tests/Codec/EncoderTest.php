@@ -150,6 +150,17 @@ class EncoderTest extends TestCase
             $w->getBuffer()
         );
 
+        $o = new \stdClass();
+        $o->foo = 'bar';
+        $o->baz = [1, 2, 3];
+        $o->qux = true;
+        $w = new MemoryWriter();
+        $e->encode($w, $o);
+        $this->assertEquals(
+            'du3:bazli1ei2ei3eeu3:foou3:baru3:quxte',
+            $w->getBuffer()
+        );
+
         $w = new MemoryWriter();
         $res = tmpfile();
         $this->assertThrows('TypeError', function () use ($e, $w, $res) {
@@ -168,21 +179,44 @@ class EncoderTest extends TestCase
             $w = new MemoryWriter();
             $encoder->encodeDictionary($w, []);
             $this->assertEquals('de', $w->getBuffer());
+
+            $w = new MemoryWriter();
+            $encoder->encodeDictionary($w, new \stdClass());
+            $this->assertEquals('de', $w->getBuffer());
         }
 
+        $dictArray = ['foo' => 1, 'bar' => 2];
+        $dictObject = new \stdClass();
+        $dictObject->foo = 1;
+        $dictObject->bar = 2;
         foreach ([$e, $eEucKr] as $encoder) {
             $w = new MemoryWriter();
-            $encoder->encodeDictionary($w, ['foo' => 1, 'bar' => 2]);
+            $encoder->encodeDictionary($w, $dictArray);
+            $this->assertEquals('du3:bari2eu3:fooi1ee', $w->getBuffer());
+
+            $w = new MemoryWriter();
+            $encoder->encodeDictionary($w, $dictObject);
             $this->assertEquals('du3:bari2eu3:fooi1ee', $w->getBuffer());
         }
 
         $w = new MemoryWriter();
-        $eBin->encodeDictionary($w, ['foo' => 1, 'bar' => 2]);
+        $eBin->encodeDictionary($w, $dictArray);
         $this->assertEquals('d3:bari2e3:fooi1ee', $w->getBuffer());
 
+        $w = new MemoryWriter();
+        $eBin->encodeDictionary($w, $dictObject);
+        $this->assertEquals('d3:bari2e3:fooi1ee', $w->getBuffer());
+
+        $binKeyedArray = ["\xc3\x28" => true];
+        $binKeyedObject = new \stdClass();
+        $binKeyedObject->{"\xc3\x28"} = true;
         foreach ([$e, $eEucKr, $eBin] as $encoder) {
             $w = new MemoryWriter();
-            $encoder->encodeDictionary($w, ["\xc3\x28" => true]);
+            $encoder->encodeDictionary($w, $binKeyedArray);
+            $this->assertEquals("d2:\xc3\x28te", $w->getBuffer());
+
+            $w = new MemoryWriter();
+            $encoder->encodeDictionary($w, $binKeyedObject);
             $this->assertEquals("d2:\xc3\x28te", $w->getBuffer());
         }
 
@@ -191,6 +225,16 @@ class EncoderTest extends TestCase
             $w,
             ["\xb4\xdc\xc6\xcf" => 'second', "\xc3\x28" => 'first']
         );
+        $this->assertEquals(
+            "d2:\xc3\x28u5:firstu6:단팥u6:seconde",
+            $w->getBuffer()
+        );
+
+        $eucKrObject = new \stdClass();
+        $eucKrObject->{"\xb4\xdc\xc6\xcf"} = 'second';
+        $eucKrObject->{"\xc3\x28"} = 'first';
+        $w = new MemoryWriter();
+        $eEucKr->encodeDictionary($w, $eucKrObject);
         $this->assertEquals(
             "d2:\xc3\x28u5:firstu6:단팥u6:seconde",
             $w->getBuffer()
