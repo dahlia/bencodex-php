@@ -136,12 +136,12 @@ class EncoderTest extends TestCase
         }
 
         $w = new MemoryWriter();
-        $e->encode($w, [true, null, '단팥', [], ['foo' => 'bar']]);
-        $this->assertEquals('ltnu6:단팥ledu3:foou3:baree', $w->getBuffer());
+        $e->encode($w, [true, null, '단팥', [null], ['foo' => 'bar']]);
+        $this->assertEquals('ltnu6:단팥lnedu3:foou3:baree', $w->getBuffer());
 
         $w = new MemoryWriter();
-        $eBin->encode($w, [true, null, '단팥', [], ['foo' => 'bar']]);
-        $this->assertEquals('ltn6:단팥led3:foo3:baree', $w->getBuffer());
+        $eBin->encode($w, [true, null, '단팥', [true], ['foo' => 'bar']]);
+        $this->assertEquals('ltn6:단팥lted3:foo3:baree', $w->getBuffer());
 
         $w = new MemoryWriter();
         $e->encode($w, ['foo' => 'bar', 'baz' => [1, 2, 3], 'qux' => true]);
@@ -214,6 +214,22 @@ class EncoderTest extends TestCase
             "lntfi123ei456eu3:foou9:甲乙丙2:\xc3\x28li1ei2eee",
             $w->getBuffer()
         );
+
+        $w = new MemoryWriter();
+        $e->encodeList($w, [[], ['foo' => 1, 'bar' => 2]]);
+        $this->assertEquals('ldedu3:bari2eu3:fooi1eee', $w->getBuffer());
+
+        $w = new MemoryWriter();
+        $e->encodeList($w, [['foo' => 1], []]);
+        $this->assertEquals('ldu3:fooi1eedee', $w->getBuffer());
+
+        $w = new MemoryWriter();
+        $e->encodeList($w, [[], ['foo' => 1, 'bar' => 2], [true, false]]);
+        $this->assertEquals('lledu3:bari2eu3:fooi1eeltfee', $w->getBuffer());
+
+        $w = new MemoryWriter();
+        $e->encodeList($w, [['foo' => 1], [], [true, false]]);
+        $this->assertEquals('ldu3:fooi1eeleltfee', $w->getBuffer());
     }
 
     public function testEncodeNull()

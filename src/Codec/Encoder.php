@@ -204,12 +204,24 @@ final class Encoder
     public function encodeList(Writer $writer, $list)
     {
         $writer->write('l');
-        // TODO: Heuristics to determine if elements are dictionaries or lists
-        // need to be added.  For example, [['foo' => 1], [], ['bar' => 2]]
-        // should be considered as three dictionaries rather than two
-        //dictionaries and an empty list.
+        // Determine empty arrays' type
+        $emptyArrayAsDict = false;
         foreach ($list as $value) {
-            $this->encode($writer, $value);
+            if (is_array($value) && !empty($value)) {
+                if (array_is_list($value)) {
+                    $emptyArrayAsDict = false;
+                    break;
+                } else {
+                    $emptyArrayAsDict = true;
+                }
+            }
+        }
+        foreach ($list as $value) {
+            if (is_array($value) && empty($value) && $emptyArrayAsDict) {
+                $this->encodeDictionary($writer, $value);
+            } else {
+                $this->encode($writer, $value);
+            }
         }
         $writer->write('e');
     }
