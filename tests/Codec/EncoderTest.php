@@ -25,13 +25,13 @@ class EncoderTest extends TestCase
         $this->assertNull($e->getTextEncoding());
         $this->assertNull($e->getKeyEncoding());
 
-        $this->assertThrows('ValueError', function () {
+        $this->assertThrows('Bencodex\Codec\TextEncodingError', function () {
             new Encoder('utf-1');
         });
         $this->assertThrows('TypeError', function () {
             new Encoder(123);
         });
-        $this->assertThrows('ValueError', function () {
+        $this->assertThrows('Bencodex\Codec\TextEncodingError', function () {
             new Encoder(null, 'euc-zz');
         });
         $this->assertThrows('TypeError', function () {
@@ -59,9 +59,12 @@ class EncoderTest extends TestCase
         $this->assertThrows('TypeError', function () use ($e) {
             $e->setTextEncoding(123);
         });
-        $this->assertThrows('ValueError', function () use ($e) {
-            $e->setTextEncoding('utf-1');
-        });
+        $this->assertThrows(
+            'Bencodex\Codec\TextEncodingError',
+            function () use ($e) {
+                $e->setTextEncoding('utf-1');
+            }
+        );
     }
 
     public function testGetKeyEncoding()
@@ -84,9 +87,12 @@ class EncoderTest extends TestCase
         $this->assertThrows('TypeError', function () use ($e) {
             $e->setKeyEncoding(123);
         });
-        $this->assertThrows('ValueError', function () use ($e) {
-            $e->setKeyEncoding('utf-1');
-        });
+        $this->assertThrows(
+            'Bencodex\Codec\TextEncodingError',
+            function () use ($e) {
+                $e->setKeyEncoding('utf-1');
+            }
+        );
     }
 
     public function testEncode()

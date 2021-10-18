@@ -83,7 +83,7 @@ final class Encoder
                 );
             }
             if (!validateTextEncoding($textEncoding)) {
-                throw new \ValueError(
+                throw new TextEncodingError(
                     "Invalid or unsupported encoding: $textEncoding."
                 );
             }
@@ -126,7 +126,7 @@ final class Encoder
                 );
             }
             if (!validateTextEncoding($keyEncoding)) {
-                throw new \ValueError(
+                throw new TextEncodingError(
                     "Invalid or unsupported encoding: $keyEncoding."
                 );
             }
