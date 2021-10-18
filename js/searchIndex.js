@@ -116,6 +116,16 @@ Search.appendIndex(
             "summary": "Reads\u0020a\u0020chunk\u0020of\u0020bytes.",
             "url": "classes/Bencodex-Readers-MemoryReader.html#method_read"
         },                {
+            "fqsen": "\\Bencodex\\Readers\\MemoryReader\u003A\u003Atell\u0028\u0029",
+            "name": "tell",
+            "summary": "Gets\u0020the\u0020current\u0020offset\u0020in\u0020the\u0020buffer.",
+            "url": "classes/Bencodex-Readers-MemoryReader.html#method_tell"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\MemoryReader\u003A\u003Aseek\u0028\u0029",
+            "name": "seek",
+            "summary": "Fast\u002Dforwards\u0020or\u0020rewinds\u0020the\u0020offset.",
+            "url": "classes/Bencodex-Readers-MemoryReader.html#method_seek"
+        },                {
             "fqsen": "\\Bencodex\\Readers\\Reader",
             "name": "Reader",
             "summary": "An\u0020interface\u0020to\u0020read\u0020a\u0020byte\u0020string\u0020\u0028which\u0020can\u0020be\u0020quite\u0020long\u0029\u0020in\u0020separated\nmultiple\u0020chunks.",
@@ -125,6 +135,16 @@ Search.appendIndex(
             "name": "read",
             "summary": "Reads\u0020a\u0020chunk\u0020of\u0020bytes.",
             "url": "classes/Bencodex-Readers-Reader.html#method_read"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\Reader\u003A\u003Atell\u0028\u0029",
+            "name": "tell",
+            "summary": "Gets\u0020the\u0020current\u0020offset\u0020in\u0020the\u0020buffer.",
+            "url": "classes/Bencodex-Readers-Reader.html#method_tell"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\Reader\u003A\u003Aseek\u0028\u0029",
+            "name": "seek",
+            "summary": "Fast\u002Dforwards\u0020or\u0020rewinds\u0020the\u0020offset.",
+            "url": "classes/Bencodex-Readers-Reader.html#method_seek"
         },                {
             "fqsen": "\\Bencodex\\Writers\\MemoryWriter",
             "name": "MemoryWriter",
