@@ -10,6 +10,15 @@ This package implements [Bencodex] serialization format which extends
 [Bencoding].  Complianet with Bencodex 1.2.
 
 
+Requirements
+------------
+
+- PHP 5.4 or later
+- [iconv] extension (`--with-iconv`)
+
+[iconv]: https://www.php.net/manual/en/book.iconv.php
+
+
 Type correspondences
 --------------------
 
