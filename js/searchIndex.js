@@ -101,6 +101,31 @@ Search.appendIndex(
             "summary": "Encodes\u0020the\u0020given\u0020value\u0020into\u0020Bencodex\u0020data.",
             "url": "namespaces/bencodex.html#function_encode"
         },                {
+            "fqsen": "\\Bencodex\\Readers\\MemoryReader",
+            "name": "MemoryReader",
+            "summary": "A\u0020reader\u0020that\u0020holds\u0020an\u0020in\u002Dmemory\u0020buffer.",
+            "url": "classes/Bencodex-Readers-MemoryReader.html"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\MemoryReader\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Creates\u0020a\u0020\u007B\u0040see\u0020MemoryWriter\u007D\u0020instance.",
+            "url": "classes/Bencodex-Readers-MemoryReader.html#method___construct"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\MemoryReader\u003A\u003Aread\u0028\u0029",
+            "name": "read",
+            "summary": "Reads\u0020a\u0020chunk\u0020of\u0020bytes.",
+            "url": "classes/Bencodex-Readers-MemoryReader.html#method_read"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\Reader",
+            "name": "Reader",
+            "summary": "An\u0020interface\u0020to\u0020read\u0020a\u0020byte\u0020string\u0020\u0028which\u0020can\u0020be\u0020quite\u0020long\u0029\u0020in\u0020separated\nmultiple\u0020chunks.",
+            "url": "classes/Bencodex-Readers-Reader.html"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\Reader\u003A\u003Aread\u0028\u0029",
+            "name": "read",
+            "summary": "Reads\u0020a\u0020chunk\u0020of\u0020bytes.",
+            "url": "classes/Bencodex-Readers-Reader.html#method_read"
+        },                {
             "fqsen": "\\Bencodex\\Writers\\MemoryWriter",
             "name": "MemoryWriter",
             "summary": "A\u0020writer\u0020that\u0020copies\u0020the\u0020given\u0020byte\u0020string\u0020into\u0020an\u0020in\u002Dmemory\u0020buffer\u0020and\nallows\u0020to\u0020get\u0020the\u0020written\u0020byte\u0020string\u0020from\u0020the\u0020buffer.",
@@ -175,6 +200,11 @@ Search.appendIndex(
             "name": "Bencodex",
             "summary": "",
             "url": "namespaces/bencodex.html"
+        },                {
+            "fqsen": "\\Bencodex\\Readers",
+            "name": "Readers",
+            "summary": "",
+            "url": "namespaces/bencodex-readers.html"
         },                {
             "fqsen": "\\Bencodex\\Writers",
             "name": "Writers",

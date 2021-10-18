@@ -93,12 +93,12 @@
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
             <li class="phpdocumentor-breadcrumb"><a href="namespaces/bencodex.html">Bencodex</a></li>
-            <li class="phpdocumentor-breadcrumb"><a href="namespaces/bencodex-writers.html">Writers</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/bencodex-readers.html">Readers</a></li>
     </ul>
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    MemoryWriter
+    MemoryReader
 
     
             <div class="phpdocumentor-element__package">
@@ -110,19 +110,18 @@
     
             <span class="phpdocumentor-element__implements">
             implements
-                            <a href="classes/Bencodex-Writers-Writer.html"><abbr title="\Bencodex\Writers\Writer">Writer</abbr></a>                    </span>
+                            <a href="classes/Bencodex-Readers-Reader.html"><abbr title="\Bencodex\Readers\Reader">Reader</abbr></a>                    </span>
     
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Writers/MemoryWriter.php"><a href="files/src-writers-memorywriter.html"><abbr title="src/Writers/MemoryWriter.php">MemoryWriter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/MemoryReader.php"><a href="files/src-readers-memoryreader.html"><abbr title="src/Readers/MemoryReader.php">MemoryReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">9</span>
+    <span class="phpdocumentor-element-found-in__line">10</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">A writer that copies the given byte string into an in-memory buffer and
-allows to get the written byte string from the buffer.</p>
+            <p class="phpdocumentor-summary">A reader that holds an in-memory buffer.</p>
 
 
 
@@ -136,9 +135,9 @@ allows to get the written byte string from the buffer.</p>
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Bencodex-Writers-Writer.html"><abbr title="\Bencodex\Writers\Writer">Writer</abbr></a></dt>
-        <dd>An interface to write a byte string (which can be quite long) in
-separated multiple chunks.</dd>
+            <dt class="phpdocumentor-table-of-contents__entry -interface"><a href="classes/Bencodex-Readers-Reader.html"><abbr title="\Bencodex\Readers\Reader">Reader</abbr></a></dt>
+        <dd>An interface to read a byte string (which can be quite long) in separated
+multiple chunks.</dd>
     
     
     </dl>
@@ -151,39 +150,18 @@ separated multiple chunks.</dd>
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Writers-MemoryWriter.html#method___construct">__construct()</a>
+    <a href="classes/Bencodex-Readers-MemoryReader.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
 </dt>
-<dd>Creates a new {@see MemoryWriter} instance with an empty buffer.</dd>
+<dd>Creates a {@see MemoryWriter} instance.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Writers-MemoryWriter.html#method___toString">__toString()</a>
-    <span>
-                        &nbsp;: mixed    </span>
-</dt>
-<dd></dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Writers-MemoryWriter.html#method_getBuffer">getBuffer()</a>
+    <a href="classes/Bencodex-Readers-MemoryReader.html#method_read">read()</a>
     <span>
                         &nbsp;: string    </span>
 </dt>
-<dd>Gets the written contents from the buffer.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Writers-MemoryWriter.html#method_getLength">getLength()</a>
-    <span>
-                        &nbsp;: int    </span>
-</dt>
-<dd>Gets the total number of written bytes.</dd>
-
-            <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Writers-MemoryWriter.html#method_write">write()</a>
-    <span>
-                        &nbsp;: void    </span>
-</dt>
-<dd>Writes the given chunk of bytes.</dd>
+<dd>Reads a chunk of bytes.</dd>
 
         </dl>
 
@@ -196,7 +174,7 @@ separated multiple chunks.</dd>
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Bencodex-Writers-MemoryWriter.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Bencodex-Readers-MemoryReader.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -206,167 +184,92 @@ separated multiple chunks.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Bencodex-Writers-MemoryWriter.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Bencodex-Readers-MemoryReader.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Writers/MemoryWriter.php"><a href="files/src-writers-memorywriter.html"><abbr title="src/Writers/MemoryWriter.php">MemoryWriter.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/MemoryReader.php"><a href="files/src-readers-memoryreader.html"><abbr title="src/Readers/MemoryReader.php">MemoryReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">24</span>
+    <span class="phpdocumentor-element-found-in__line">29</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Creates a new {@see MemoryWriter} instance with an empty buffer.</p>
+        <p class="phpdocumentor-summary">Creates a {@see MemoryWriter} instance.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method___toString">
-        __toString()
-        <a href="classes/Bencodex-Writers-MemoryWriter.html#method___toString" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Writers/MemoryWriter.php"><a href="files/src-writers-memorywriter.html"><abbr title="src/Writers/MemoryWriter.php">MemoryWriter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">69</span>
-
-    </aside>
-
-    
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__toString</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
-
-        <section class="phpdocumentor-description"></section>
-
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">mixed</span>
-            &mdash;
-        
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getBuffer">
-        getBuffer()
-        <a href="classes/Bencodex-Writers-MemoryWriter.html#method_getBuffer" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Writers/MemoryWriter.php"><a href="files/src-writers-memorywriter.html"><abbr title="src/Writers/MemoryWriter.php">MemoryWriter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">50</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Gets the written contents from the buffer.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getBuffer</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">string</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>The byte string written into the buffer.</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_getLength">
-        getLength()
-        <a href="classes/Bencodex-Writers-MemoryWriter.html#method_getLength" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Writers/MemoryWriter.php"><a href="files/src-writers-memorywriter.html"><abbr title="src/Writers/MemoryWriter.php">MemoryWriter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">64</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Gets the total number of written bytes.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">getLength</span><span>(</span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">int</span></code>
-
-    
-    
-    
-
-        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">int</span>
-            &mdash;
-            <section class="phpdocumentor-description"><p>The total number of written bytes.</p>
-</section>
-
-    
-</article>
-                    <article
-        class="phpdocumentor-element
-            -method
-            -public
-                                                        "
->
-    <h4 class="phpdocumentor-element__name" id="method_write">
-        write()
-        <a href="classes/Bencodex-Writers-MemoryWriter.html#method_write" class="headerlink"><i class="fas fa-link"></i></a>
-    </h4>
-    <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Writers/MemoryWriter.php"><a href="files/src-writers-memorywriter.html"><abbr title="src/Writers/MemoryWriter.php">MemoryWriter.php</abbr></a></abbr>
-    :
-    <span class="phpdocumentor-element-found-in__line">33</span>
-
-    </aside>
-
-        <p class="phpdocumentor-summary">Writes the given chunk of bytes.</p>
-
-    <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">write</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$bytes</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$buffer</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$bytes</span>
+                <span class="phpdocumentor-signature__argument__name">$buffer</span>
+                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>The input bytes to be consumed later.</p>
+</section>
+
+            </dd>
+            </dl>
+
+    
+    <h5 class="phpdocumentor-tag-list__heading" id="tags">
+        Tags
+        <a href="#tags" class="headerlink"><i class="fas fa-link"></i></a>
+    </h5>
+    <dl class="phpdocumentor-tag-list">
+                                    <dt class="phpdocumentor-tag-list__entry">
+                    <span class="phpdocumentor-tag__name">throws</span>
+                </dt>
+                <dd class="phpdocumentor-tag-list__definition">
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\TypeError">TypeError</abbr></span>
+                                                            
+                                                 <section class="phpdocumentor-description"><p>Thrown when the buffer is not a string.</p>
+</section>
+
+                                    </dd>
+                        </dl>
+
+        <h5 class="phpdocumentor-return-value__heading">Return values</h5>
+    <span class="phpdocumentor-signature__response_type">mixed</span>
+            &mdash;
+        
+    
+</article>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_read">
+        read()
+        <a href="classes/Bencodex-Readers-MemoryReader.html#method_read" class="headerlink"><i class="fas fa-link"></i></a>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/MemoryReader.php"><a href="files/src-readers-memoryreader.html"><abbr title="src/Readers/MemoryReader.php">MemoryReader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">43</span>
+
+    </aside>
+
+        <p class="phpdocumentor-summary">Reads a chunk of bytes.</p>
+
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">read</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$size</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+
+    
+        <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
+    <dl class="phpdocumentor-argument-list">
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$size</span>
                 : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The byte string to write.  This is usually a chunk
-of a longer byte string.</p>
+                    <section class="phpdocumentor-description"><p>The size of bytes to request.  Zero or negative integers
+consume nothing and an empty string is returned.</p>
 </section>
 
             </dd>
@@ -388,9 +291,12 @@ of a longer byte string.</p>
                         </dl>
 
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
-    <span class="phpdocumentor-signature__response_type">void</span>
+    <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
-        
+            <section class="phpdocumentor-description"><p>The read bytes.  It may be shorter than the requested
+size if the internal buffer is almost consumed.</p>
+</section>
+
     
 </article>
             </section>
@@ -471,7 +377,7 @@ of a longer byte string.</p>
 </section>
             </div>
         </div>
-        <a href="classes/Bencodex-Writers-MemoryWriter.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Bencodex-Readers-MemoryReader.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

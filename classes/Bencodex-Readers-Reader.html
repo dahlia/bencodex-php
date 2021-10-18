@@ -92,22 +92,36 @@
 
             <div class="phpdocumentor-column -eight phpdocumentor-content">
                     <ul class="phpdocumentor-breadcrumbs">
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/bencodex.html">Bencodex</a></li>
+            <li class="phpdocumentor-breadcrumb"><a href="namespaces/bencodex-readers.html">Readers</a></li>
     </ul>
 
-    <article class="phpdocumentor-element -namespace">
-        <h2 class="phpdocumentor-content__title">Bencodex</h2>
+    <article class="phpdocumentor-element -interface">
+        <h2 class="phpdocumentor-content__title">
+    Reader
+                <div class="phpdocumentor-element__package">
+            in
+            <ul class="phpdocumentor-breadcrumbs">
+                                    <li><a href="packages/Bencodex.html">Bencodex</a></li>
+                            </ul>
+        </div>
+    </h2>
 
-        
-<h3 id="namespaces">
-    Namespaces
-    <a href="#namespaces" class="headerlink"><i class="fas fa-link"></i></a>
-</h3>
+        <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/Reader.php"><a href="files/src-readers-reader.html"><abbr title="src/Readers/Reader.php">Reader.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">9</span>
 
-<dl class="phpdocumentor-table-of-contents">
-            <dt class="phpdocumentor-table-of-contents__entry -namespace"><a href="namespaces/bencodex-codec.html"><abbr title="\Bencodex\Codec">Codec</abbr></a></dt>
-            <dt class="phpdocumentor-table-of-contents__entry -namespace"><a href="namespaces/bencodex-readers.html"><abbr title="\Bencodex\Readers">Readers</abbr></a></dt>
-            <dt class="phpdocumentor-table-of-contents__entry -namespace"><a href="namespaces/bencodex-writers.html"><abbr title="\Bencodex\Writers">Writers</abbr></a></dt>
-    </dl>
+    </aside>
+
+            <p class="phpdocumentor-summary">An interface to read a byte string (which can be quite long) in separated
+multiple chunks.</p>
+
+
+
+
+
+
 
 
 
@@ -117,91 +131,57 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                        <dt class="phpdocumentor-table-of-contents__entry -function -">
-    <a href="namespaces/bencodex.html#function_encode">encode()</a>
+                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+    <a href="classes/Bencodex-Readers-Reader.html#method_read">read()</a>
     <span>
                         &nbsp;: string    </span>
 </dt>
-<dd>Encodes the given value into Bencodex data.</dd>
+<dd>Reads a chunk of bytes.</dd>
 
-    </dl>
+        </dl>
+
+
 
         
 
-            <section class="phpdocumentor-functions">
-        <h3 class="phpdocumentor-elements__header" id="functions">
-            Functions
-            <a href="namespaces/bencodex.html#functions" class="headerlink"><i class="fas fa-link"></i></a>
+            <section class="phpdocumentor-methods">
+        <h3 class="phpdocumentor-elements__header" id="methods">
+            Methods
+            <a href="classes/Bencodex-Readers-Reader.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
-                    <article class="phpdocumentor-element -function - ">
-    <h4 class="phpdocumentor-element__name" id="function_encode">
-        encode()
-        <a href="namespaces/bencodex.html#function_encode" class="headerlink"><i class="fas fa-link"></i></a>
+                    <article
+        class="phpdocumentor-element
+            -method
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="method_read">
+        read()
+        <a href="classes/Bencodex-Readers-Reader.html#method_read" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/functions.php"><a href="files/src-functions.html"><abbr title="src/functions.php">functions.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/Reader.php"><a href="files/src-readers-reader.html"><abbr title="src/Readers/Reader.php">Reader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">34</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Encodes the given value into Bencodex data.</p>
+        <p class="phpdocumentor-summary">Reads a chunk of bytes.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
-    <span class="phpdocumentor-signature__visibility"></span>
-                <span class="phpdocumentor-signature__name">encode</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">mixed&nbsp;</span><span class="phpdocumentor-signature__argument__name">$value</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$textEncoding</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$keyEncoding</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$byteOrderMark</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
+    <span class="phpdocumentor-signature__visibility">public</span>
+                <span class="phpdocumentor-signature__name">read</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">int&nbsp;</span><span class="phpdocumentor-signature__argument__name">$size</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">string</span></code>
 
-        <section class="phpdocumentor-description"><p>This is a facade of <a href="classes/Bencodex-Codec-Encoder.html"><abbr title="\Bencodex\Codec\Encoder">Encoder</abbr></a> class.</p>
-</section>
-
+    
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$value</span>
-                : <span class="phpdocumentor-signature__argument__return-type">mixed</span>
+                <span class="phpdocumentor-signature__argument__name">$size</span>
+                : <span class="phpdocumentor-signature__argument__return-type">int</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The value to be encoded in Bencodex.</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$textEncoding</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Determines what text encoding the PHP
-strings you want to encode are in.
-If the PHP strings are binary data and
-not Unicode text, then this should be
-set to null.  UTF-8 by default.</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$keyEncoding</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string|null</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Determines what text encoding the string
-keys of the PHP arrays you want to encode
-are in. If the PHP string keys are binary
-keys and not Unicode keys, they should be
-set to null.  UTF-8 by default.</p>
-</section>
-
-            </dd>
-                    <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$byteOrderMark</span>
-                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
-                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
-            <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>Whether to respect BOMs (byte order marks).
-If turned on, strings without BOMs are
-considered as binary and BOMs are stripped
-after encoding.
-If turned off (default), there's no special
-treatment for BOM.</p>
+                    <section class="phpdocumentor-description"><p>The size of bytes to request.  Zero or negative integers
+consume nothing and an empty string is returned.</p>
 </section>
 
             </dd>
@@ -217,10 +197,9 @@ treatment for BOM.</p>
                     <span class="phpdocumentor-tag__name">throws</span>
                 </dt>
                 <dd class="phpdocumentor-tag-list__definition">
-                                                                <span class="phpdocumentor-tag-link"><a href="classes/Bencodex-Codec-TextEncodingError.html"><abbr title="\Bencodex\Codec\TextEncodingError">TextEncodingError</abbr></a></span>
+                                                                <span class="phpdocumentor-tag-link"><abbr title="\TypeError">TypeError</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"><p>Thrown when the given text encoding is invalid
-or unsupported by iconv.</p>
+                                                 <section class="phpdocumentor-description"><p>Thrown when the requested size is not an integer.</p>
 </section>
 
                                     </dd>
@@ -229,12 +208,75 @@ or unsupported by iconv.</p>
         <h5 class="phpdocumentor-return-value__heading">Return values</h5>
     <span class="phpdocumentor-signature__response_type">string</span>
             &mdash;
-            <section class="phpdocumentor-description"><p>The encoded Bencodex data.</p>
+            <section class="phpdocumentor-description"><p>The read bytes.  It may be shorter than the requested
+size if the internal buffer is almost consumed.</p>
 </section>
 
     
 </article>
             </section>
+
+        
+    <script type="text/javascript">
+        function loadExternalCodeSnippets(line) {
+            Array.prototype.slice.call(document.querySelectorAll('pre[data-src]')).forEach((pre) => {
+                var src = pre.getAttribute('data-src').replace( /\\/g, '/');
+                var extension = (src.match(/\.(\w+)$/) || [, ''])[1];
+                var language = 'php';
+
+                var code = document.createElement('code');
+                code.className = 'language-' + language;
+
+                pre.textContent = '';
+
+                pre.setAttribute('data-line', line)
+                code.textContent = 'Loading…';
+
+                pre.appendChild(code);
+
+                var xhr = new XMLHttpRequest();
+
+                xhr.open('GET', src, true);
+
+                xhr.onreadystatechange = function () {
+                    if (xhr.readyState == 4) {
+
+                        if (xhr.status < 400 && xhr.responseText) {
+                            code.textContent = xhr.responseText;
+
+                            Prism.highlightElement(code);
+                        }
+                        else if (xhr.status >= 400) {
+                            code.textContent = '✖ Error ' + xhr.status + ' while fetching file: ' + xhr.statusText;
+                        }
+                        else {
+                            code.textContent = '✖ Error: File does not exist, is empty or trying to view from localhost';
+                        }
+                    }
+                };
+
+                xhr.send(null);
+            });
+        }
+
+        var modals = document.querySelectorAll("[data-modal]");
+
+        modals.forEach(function (trigger) {
+            trigger.addEventListener("click", function (event) {
+                //event.preventDefault();
+                const modal = document.getElementById(trigger.dataset.modal);
+                modal.classList.add("phpdocumentor-modal__open");
+                loadExternalCodeSnippets(trigger.dataset.line)
+                const exits = modal.querySelectorAll("[data-exit-button]");
+                exits.forEach(function (exit) {
+                    exit.addEventListener("click", function (event) {
+                        event.preventDefault();
+                        modal.classList.remove("phpdocumentor-modal__open");
+                    });
+                });
+            });
+        });
+    </script>
 
     </article>
                 <section data-search-results class="phpdocumentor-search-results phpdocumentor-search-results--hidden">
@@ -250,7 +292,7 @@ or unsupported by iconv.</p>
 </section>
             </div>
         </div>
-        <a href="namespaces/bencodex.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Bencodex-Readers-Reader.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 
