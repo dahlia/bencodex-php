@@ -81,6 +81,11 @@ Search.appendIndex(
             "summary": "Validates\u0020if\u0020the\u0020given\u0020text\u0020encoding\u0020is\u0020valid\u0020and\u0020supported\u0020by\u0020iconv.",
             "url": "namespaces/bencodex-codec.html#function_validateTextEncoding"
         },                {
+            "fqsen": "\\Bencodex\\Codec\\array_is_list\u0028\u0029",
+            "name": "array_is_list",
+            "summary": "",
+            "url": "namespaces/bencodex-codec.html#function_array_is_list"
+        },                {
             "fqsen": "\\Bencodex\\Codec\\TextEncodingError",
             "name": "TextEncodingError",
             "summary": "The\u0020exception\u0020thrown\u0020when\u0020the\u0020configured\u0020text\u0020encoding\u0020is\u0020invalid\u0020or\nunsupported\u0020by\u0020iconv.",
