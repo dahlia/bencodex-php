@@ -76,6 +76,11 @@ Search.appendIndex(
             "summary": "",
             "url": "classes/Bencodex-Codec-Encoder.html#method_encodeBinary"
         },                {
+            "fqsen": "\\Bencodex\\Codec\\Encoder\u003A\u003A\u0024byteOrderMark",
+            "name": "byteOrderMark",
+            "summary": "",
+            "url": "classes/Bencodex-Codec-Encoder.html#property_byteOrderMark"
+        },                {
             "fqsen": "\\Bencodex\\Codec\\validateTextEncoding\u0028\u0029",
             "name": "validateTextEncoding",
             "summary": "Validates\u0020if\u0020the\u0020given\u0020text\u0020encoding\u0020is\u0020valid\u0020and\u0020supported\u0020by\u0020iconv.",

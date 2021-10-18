@@ -130,7 +130,14 @@
 </h3>
 
 <dl class="phpdocumentor-table-of-contents">
-                    <dt class="phpdocumentor-table-of-contents__entry -method -public">
+                <dt class="phpdocumentor-table-of-contents__entry -property -public">
+    <a href="classes/Bencodex-Codec-Encoder.html#property_byteOrderMark">$byteOrderMark</a>
+    <span>
+                &nbsp;: bool            </span>
+</dt>
+<dd></dd>
+
+                <dt class="phpdocumentor-table-of-contents__entry -method -public">
     <a href="classes/Bencodex-Codec-Encoder.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: mixed    </span>
@@ -237,6 +244,49 @@ to encode are in.</dd>
         
 
         
+    <section class="phpdocumentor-properties">
+        <h3 class="phpdocumentor-elements__header" id="properties">
+            Properties
+            <a href="classes/Bencodex-Codec-Encoder.html#properties" class="headerlink"><i class="fas fa-link"></i></a>
+        </h3>
+                    <article
+        class="
+            phpdocumentor-element
+            -property
+            -public
+                                                        "
+>
+    <h4 class="phpdocumentor-element__name" id="property_byteOrderMark">
+        $byteOrderMark
+        <a href="classes/Bencodex-Codec-Encoder.html#property_byteOrderMark" class="headerlink"><i class="fas fa-link"></i></a>
+        <span class="phpdocumentor-element__modifiers">
+                                </span>
+    </h4>
+    <aside class="phpdocumentor-element-found-in">
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
+    :
+    <span class="phpdocumentor-element-found-in__line">40</span>
+
+    </aside>
+
+    
+    <code class="phpdocumentor-code phpdocumentor-signature ">
+    <span class="phpdocumentor-signature__visibility">public</span>
+        <span class="phpdocumentor-signature__type">bool</span>
+    <span class="phpdocumentor-signature__name">$byteOrderMark</span>
+     = <span class="phpdocumentor-signature__default-value">false</span></code>
+
+    
+        <section class="phpdocumentor-description"><p>Whether to respect BOMs (byte order marks).
+If turned on, strings without BOMs are considered as binary
+and BOMs are stripped after encoding.
+If turned off (default), there's no special treatment for BOM.</p>
+</section>
+
+    
+
+</article>
+            </section>
 
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
@@ -256,7 +306,7 @@ to encode are in.</dd>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">50</span>
+    <span class="phpdocumentor-element-found-in__line">63</span>
 
     </aside>
 
@@ -264,7 +314,7 @@ to encode are in.</dd>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$textEncoding</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$keyEncoding</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span>[</span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$textEncoding</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">string|null&nbsp;</span><span class="phpdocumentor-signature__argument__name">$keyEncoding</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">&#039;utf-8&#039;</span><span> ]</span></span><span class="phpdocumentor-signature__argument"><span>[</span><span>, </span><span class="phpdocumentor-signature__argument__return-type">bool&nbsp;</span><span class="phpdocumentor-signature__argument__name">$byteOrderMark</span><span> = </span><span class="phpdocumentor-signature__argument__default-value">false</span><span> ]</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">mixed</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
@@ -292,6 +342,20 @@ keys of the PHP arrays you want to encode
 are in. If the PHP string keys are binary
 keys and not Unicode keys, they should be
 set to null.  UTF-8 by default.</p>
+</section>
+
+            </dd>
+                    <dt class="phpdocumentor-argument-list__entry">
+                <span class="phpdocumentor-signature__argument__name">$byteOrderMark</span>
+                : <span class="phpdocumentor-signature__argument__return-type">bool</span>
+                 = <span class="phpdocumentor-signature__argument__default-value">false</span>            </dt>
+            <dd class="phpdocumentor-argument-list__definition">
+                    <section class="phpdocumentor-description"><p>Whether to respect BOMs (byte order marks).
+If turned on, strings without BOMs are
+considered as binary and BOMs are stripped
+after encoding.
+If turned off (default), there's no special
+treatment for BOM.</p>
 </section>
 
             </dd>
@@ -335,7 +399,7 @@ or unsupported by iconv.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">152</span>
+    <span class="phpdocumentor-element-found-in__line">169</span>
 
     </aside>
 
@@ -391,7 +455,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">266</span>
+    <span class="phpdocumentor-element-found-in__line">286</span>
 
     </aside>
 
@@ -443,7 +507,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">240</span>
+    <span class="phpdocumentor-element-found-in__line">257</span>
 
     </aside>
 
@@ -495,7 +559,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">184</span>
+    <span class="phpdocumentor-element-found-in__line">201</span>
 
     </aside>
 
@@ -547,7 +611,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">245</span>
+    <span class="phpdocumentor-element-found-in__line">262</span>
 
     </aside>
 
@@ -599,7 +663,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">210</span>
+    <span class="phpdocumentor-element-found-in__line">227</span>
 
     </aside>
 
@@ -651,7 +715,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">235</span>
+    <span class="phpdocumentor-element-found-in__line">252</span>
 
     </aside>
 
@@ -695,7 +759,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">251</span>
+    <span class="phpdocumentor-element-found-in__line">268</span>
 
     </aside>
 
@@ -755,7 +819,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">260</span>
+    <span class="phpdocumentor-element-found-in__line">277</span>
 
     </aside>
 
@@ -807,7 +871,7 @@ use <a href="classes/Bencodex-Writers-MemoryWriter.html"><abbr title="\Bencodex\
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">105</span>
+    <span class="phpdocumentor-element-found-in__line">122</span>
 
     </aside>
 
@@ -844,7 +908,7 @@ the PHP arrays you want to encode are in.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">61</span>
+    <span class="phpdocumentor-element-found-in__line">78</span>
 
     </aside>
 
@@ -880,7 +944,7 @@ want to encode are in.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">125</span>
+    <span class="phpdocumentor-element-found-in__line">142</span>
 
     </aside>
 
@@ -950,7 +1014,7 @@ or unsupported by iconv.</p>
     <aside class="phpdocumentor-element-found-in">
     <abbr class="phpdocumentor-element-found-in__file" title="src/Codec/Encoder.php"><a href="files/src-codec-encoder.html"><abbr title="src/Codec/Encoder.php">Encoder.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">80</span>
+    <span class="phpdocumentor-element-found-in__line">97</span>
 
     </aside>
 
