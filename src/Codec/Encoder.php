@@ -31,6 +31,13 @@ final class Encoder
      */
     private $keyEncoding;
 
+    /**
+     * @var bool  Whether to respect BOMs (byte order marks).
+     *            If turned on, strings without BOMs are considered as binary
+     *            and BOMs are stripped after encoding.
+     *            If turned off (default), there's no special treatment for BOM.
+     */
+    public $byteOrderMark = false;
 
     /**
      * Creates a new {@see Encoder} instance.
@@ -44,13 +51,23 @@ final class Encoder
      *                                 are in. If the PHP string keys are binary
      *                                 keys and not Unicode keys, they should be
      *                                 set to null.  UTF-8 by default.
+     * @param boolean $byteOrderMark Whether to respect BOMs (byte order marks).
+     *                               If turned on, strings without BOMs are
+     *                               considered as binary and BOMs are stripped
+     *                               after encoding.
+     *                               If turned off (default), there's no special
+     *                               treatment for BOM.
      * @throws TextEncodingError Thrown when the given text encoding is invalid
      *                           or unsupported by iconv.
      */
-    public function __construct($textEncoding = 'utf-8', $keyEncoding = 'utf-8')
-    {
+    public function __construct(
+        $textEncoding = 'utf-8',
+        $keyEncoding = 'utf-8',
+        $byteOrderMark = false
+    ) {
         $this->setTextEncoding($textEncoding);
         $this->setKeyEncoding($keyEncoding);
+        $this->byteOrderMark = $byteOrderMark;
     }
 
     /**
@@ -260,6 +277,9 @@ final class Encoder
     public function encodeText(Writer $writer, $utf8)
     {
         $writer->write('u');
+        if (substr($utf8, 0, 3) === "\xef\xbb\xbf") {
+            $utf8 = strlen($utf8) == 3 ? '' : substr($utf8, 3);
+        }
         $this->encodeBinary($writer, $utf8);
     }
 
@@ -275,7 +295,8 @@ final class Encoder
         if (!is_null($encoding)) {
             $utf8 = @iconv($encoding, 'utf-8', $string);
             if ($utf8 !== false) {
-                return true;
+                return !$this->byteOrderMark ||
+                    substr($utf8, 0, 3) == "\xef\xbb\xbf";
             }
         }
         $utf8 = null;

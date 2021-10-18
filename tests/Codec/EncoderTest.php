@@ -264,6 +264,7 @@ class EncoderTest extends TestCase
     public function testEncodeString()
     {
         $e = new Encoder();
+        $eBom = new Encoder('utf-8', 'utf-8', true);
 
         $w = new MemoryWriter();
         $e->encodeString($w, 'utf-8', '단팥');
@@ -271,6 +272,18 @@ class EncoderTest extends TestCase
 
         $w = new MemoryWriter();
         $e->encodeString($w, 'utf-8', "\xc3\x28");
+        $this->assertEquals("2:\xc3\x28", $w->getBuffer());
+
+        $w = new MemoryWriter();
+        $eBom->encodeString($w, 'utf-8', '단팥');
+        $this->assertEquals('6:단팥', $w->getBuffer());
+
+        $w = new MemoryWriter();
+        $eBom->encodeString($w, 'utf-8', "\xef\xbb\xbf단팥");
+        $this->assertEquals('u6:단팥', $w->getBuffer());
+
+        $w = new MemoryWriter();
+        $eBom->encodeString($w, 'utf-8', "\xc3\x28");
         $this->assertEquals("2:\xc3\x28", $w->getBuffer());
     }
 
