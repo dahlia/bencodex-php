@@ -19,3 +19,18 @@ function validateTextEncoding($textEncoding)
     $s = @iconv($textEncoding, 'utf-8//IGNORE', '');
     return $s !== false;
 }
+
+if (!function_exists('array_is_list')) {
+    function array_is_list(array $array)
+    {
+        $expectedKey = 0;
+        foreach ($array as $key => $_) {
+            if ($key !== $expectedKey) {
+                return false;
+            }
+            $expectedKey++;
+        }
+
+        return true;
+    }
+}
