@@ -136,6 +136,11 @@ Search.appendIndex(
             "summary": "Encodes\u0020the\u0020given\u0020value\u0020into\u0020Bencodex\u0020data.",
             "url": "namespaces/bencodex.html#function_encode"
         },                {
+            "fqsen": "\\Bencodex\\decode\u0028\u0029",
+            "name": "decode",
+            "summary": "Decodes\u0020the\u0020given\u0020Bencodex\u0020data\u0020into\u0020a\u0020PHP\u0020value.",
+            "url": "namespaces/bencodex.html#function_decode"
+        },                {
             "fqsen": "\\Bencodex\\Readers\\MemoryReader",
             "name": "MemoryReader",
             "summary": "A\u0020reader\u0020that\u0020holds\u0020an\u0020in\u002Dmemory\u0020buffer.",
