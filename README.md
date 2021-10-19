@@ -22,17 +22,18 @@ Requirements
 Type correspondences
 --------------------
 
-| PHP                                    | Bencodex             |
-|----------------------------------------|----------------------|
-| Null                                   | Null                 |
-| Boolean                                | Boolean              |
-| Integer                                | Integer              |
-| Double<sup>†</sup>                     | Integer (truncated)  |
-| String which can be decoded as Unicode | Text<sup>‡</sup>     |
-| String otherwise                       | Binary<sup>‡</sup>   |
-| List-like array<sup>※</sup>            | List                 |
-| Map-like array<sup>†</sup>             | Dictionary           |
-| Object                                 | Dictionary           |
+| PHP                                    | Bencodex                  |
+|----------------------------------------|---------------------------|
+| Null                                   | Null                      |
+| Boolean                                | Boolean                   |
+| Integer                                | Integer                   |
+| Double<sup>†</sup>                     | Integer (truncated)       |
+| Numeric string<sup>‡</sup>             | Integer ≥ [`PHP_INT_MAX`] |
+| String which can be decoded as Unicode | Text<sup>‡</sup>          |
+| String otherwise                       | Binary<sup>‡</sup>        |
+| List-like array<sup>※</sup>            | List                      |
+| Map-like array<sup>†</sup>             | Dictionary                |
+| Object                                 | Dictionary                |
 
 *† One-way types only available for encoding.*
 
@@ -41,6 +42,7 @@ Type correspondences
 *※ Determined by [`array_is_list()` function][array_is_list].*
 
 [array_is_list]: https://www.php.net/manual/en/function.array-is-list
+[`PHP_INT_MAX`]: https://www.php.net/manual/en/reserved.constants.php#constant.php-int-max
 
 Usage
 -----
