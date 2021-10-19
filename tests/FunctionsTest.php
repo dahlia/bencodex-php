@@ -23,6 +23,29 @@ class FunctionsTest extends TestCase
         );
     }
 
+    public function testDecode()
+    {
+        $bencodex = "du3:barltfneu3:foou6:단팥e";
+        $this->assertEquals(
+            (object)['foo' => '단팥', 'bar' => [true, false, null]],
+            \Bencodex\decode($bencodex)
+        );
+        $this->assertEquals(
+            (object)['foo' => "\xb4\xdc\xc6\xcf", 'bar' => [true, false, null]],
+            \Bencodex\decode($bencodex, 'euc-kr')
+        );
+        $bencodex = "du3:barltfneu3:foou6:단팥e";
+        $this->assertEquals(
+            (object)[
+                "\xff\xfe\0\0\x66\0\0\0\x6f\0\0\0\x6f\0\0\0" =>
+                    "\xff\xfe\0\0\xe8\xb2\0\0\x25\xd3\0\0",
+                "\xff\xfe\0\0\x62\0\0\0\x61\0\0\0\x72\0\0\0" =>
+                    [true, false, null],
+            ],
+            \Bencodex\decode($bencodex, 'utf-32le', true)
+        );
+    }
+
     const TEXT_ENCODING = 'utf-32le';
     const UTF32LE_BOM = "\xff\xfe\x00\x00";
 
@@ -47,6 +70,30 @@ class FunctionsTest extends TestCase
         $this->assertEquals(
             $bencodexData,
             $encoded,
+            "Not compliant with the spec: $specName"
+        );
+    }
+
+    /**
+     * @dataProvider specProvider
+     */
+    public function testDecodeOnSpec($specName, $tree, $bencodexData)
+    {
+        $specPath = __DIR__ . '/spec/testsuite';
+        $this->assertTrue(
+            is_dir($specPath),
+            "No specification test suite: $specPath; " .
+            "please initialize the Git submodules:\n" .
+            "\tgit submodule update --init --recursive"
+        );
+        $decoded = \Bencodex\decode(
+            $bencodexData,
+            self::TEXT_ENCODING,
+            true
+        );
+        $this->assertEquals(
+            $tree,
+            $decoded,
             "Not compliant with the spec: $specName"
         );
     }
