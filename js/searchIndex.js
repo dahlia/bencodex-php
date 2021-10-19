@@ -1,6 +1,41 @@
 Search.appendIndex(
     [
                 {
+            "fqsen": "\\Bencodex\\Codec\\Decoder",
+            "name": "Decoder",
+            "summary": "",
+            "url": "classes/Bencodex-Codec-Decoder.html"
+        },                {
+            "fqsen": "\\Bencodex\\Codec\\Decoder\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "",
+            "url": "classes/Bencodex-Codec-Decoder.html#method___construct"
+        },                {
+            "fqsen": "\\Bencodex\\Codec\\Decoder\u003A\u003AgetTextEncoding\u0028\u0029",
+            "name": "getTextEncoding",
+            "summary": "Determines\u0020what\u0020text\u0020encoding\u0020Bencodex\u0020text\u0020values\u0020are\u0020decoded\u0020to\u0020PHP\nstrings\u0020in.",
+            "url": "classes/Bencodex-Codec-Decoder.html#method_getTextEncoding"
+        },                {
+            "fqsen": "\\Bencodex\\Codec\\Decoder\u003A\u003AsetTextEncoding\u0028\u0029",
+            "name": "setTextEncoding",
+            "summary": "Determines\u0020what\u0020text\u0020encoding\u0020Bencodex\u0020text\u0020values\u0020are\u0020decoded\u0020to\u0020PHP\nstrings\u0020in.",
+            "url": "classes/Bencodex-Codec-Decoder.html#method_setTextEncoding"
+        },                {
+            "fqsen": "\\Bencodex\\Codec\\Decoder\u003A\u003Adecode\u0028\u0029",
+            "name": "decode",
+            "summary": "Decodes\u0020Bencodex\u0020data\u0020from\u0020the\u0020source\u0020reader\u0020into\u0020a\u0020PHP\u0020value.",
+            "url": "classes/Bencodex-Codec-Decoder.html#method_decode"
+        },                {
+            "fqsen": "\\Bencodex\\Codec\\Decoder\u003A\u003A\u0024byteOrderMark",
+            "name": "byteOrderMark",
+            "summary": "",
+            "url": "classes/Bencodex-Codec-Decoder.html#property_byteOrderMark"
+        },                {
+            "fqsen": "\\Bencodex\\Codec\\DecodingError",
+            "name": "DecodingError",
+            "summary": "The\u0020exception\u0020thrown\u0020when\u0020a\u0020Bencodex\u0020data\u0020is\u0020invalid\u0020so\u0020that\u0020it\u0020cannot\u0020be\ndecoded\u0020into\u0020a\u0020PHP\u0020value.",
+            "url": "classes/Bencodex-Codec-DecodingError.html"
+        },                {
             "fqsen": "\\Bencodex\\Codec\\Encoder",
             "name": "Encoder",
             "summary": "Encodes\u0020PHP\u0020values\u0020into\u0020corresponding\u0020Bencodex\u0020data.",
