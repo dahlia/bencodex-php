@@ -1,13 +1,33 @@
 Bencodex reader/writer for PHP
 ==============================
 
+[![Packagist Version][]][Packagist]
 [![GitHub Actions Status][]][GitHub Actions]
 
+[Packagist]: https://packagist.org/packages/bencodex/bencodex
+[Packagist Version]: https://img.shields.io/packagist/v/bencodex/bencodex
 [GitHub Actions Status]: https://github.com/dahlia/bencodex-php/actions/workflows/build.yaml/badge.svg
 [GitHub Actions]: https://github.com/dahlia/bencodex-php/actions/workflows/build.yaml
 
 This package implements [Bencodex] serialization format which extends
 [Bencoding].  Complianet with Bencodex 1.2.
+
+~~~ php
+php > echo Bencodex\encode(['foo' => 123, 'bar' => [true, false]]);
+du3:barltfeu3:fooi123ee
+php > var_dump(Bencodex\decode('du3:barltfeu3:fooi123ee'));
+object(stdClass)#4 (2) {
+  ["bar"]=>
+  array(2) {
+    [0]=>
+    bool(true)
+    [1]=>
+    bool(false)
+  }
+  ["foo"]=>
+  int(123)
+}
+~~~
 
 
 Requirements
