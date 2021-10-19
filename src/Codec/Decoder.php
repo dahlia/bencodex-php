@@ -32,6 +32,9 @@ final class Decoder
      *                               If turned off (default), BOM is added to
      *                               the decoded PHP string if and only
      *                               if the original Bencodex text has BOM.
+     * @return void
+     * @throws TextEncodingError Thrown when the given text encoding is invalid
+     *                           or unsupported by iconv.
      */
     public function __construct(
         $textEncoding = 'utf-8',

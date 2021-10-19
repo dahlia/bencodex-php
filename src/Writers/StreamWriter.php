@@ -14,6 +14,7 @@ class StreamWriter implements Writer
      * Creates a new {@see StreamWriter} instance with the given handle.
      * @param resource $handle The pointer resource which refers a writable
      *                         stream, usually a file.
+     * @return void
      */
     public function __construct($handle)
     {

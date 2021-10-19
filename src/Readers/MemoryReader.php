@@ -24,6 +24,7 @@ class MemoryReader implements Reader
     /**
      * Creates a {@see MemoryWriter} instance.
      * @param string $buffer The input bytes to be consumed later.
+     * @return void
      * @throws \TypeError Thrown when the buffer is not a string.
      */
     public function __construct($buffer)

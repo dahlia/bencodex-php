@@ -20,6 +20,7 @@ class MemoryWriter implements Writer
 
     /**
      * Creates a new {@see MemoryWriter} instance with an empty buffer.
+     * @return void
      */
     public function __construct()
     {

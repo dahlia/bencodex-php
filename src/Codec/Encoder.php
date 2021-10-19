@@ -57,6 +57,7 @@ final class Encoder
      *                               after encoding.
      *                               If turned off (default), there's no special
      *                               treatment for BOM.
+     * @return void
      * @throws TextEncodingError Thrown when the given text encoding is invalid
      *                           or unsupported by iconv.
      */
