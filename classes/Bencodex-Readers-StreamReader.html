@@ -98,7 +98,7 @@
 
     <article class="phpdocumentor-element -class">
         <h2 class="phpdocumentor-content__title">
-    MemoryReader
+    StreamReader
 
     
             <div class="phpdocumentor-element__package">
@@ -115,13 +115,13 @@
     </h2>
 
         <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/MemoryReader.php"><a href="files/src-readers-memoryreader.html"><abbr title="src/Readers/MemoryReader.php">MemoryReader.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/StreamReader.php"><a href="files/src-readers-streamreader.html"><abbr title="src/Readers/StreamReader.php">StreamReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">10</span>
+    <span class="phpdocumentor-element-found-in__line">8</span>
 
     </aside>
 
-            <p class="phpdocumentor-summary">A reader that holds an in-memory buffer.</p>
+            <p class="phpdocumentor-summary">A stream reader, which usually refers to a file.</p>
 
 
 
@@ -150,28 +150,28 @@ multiple chunks.</dd>
 
 <dl class="phpdocumentor-table-of-contents">
                     <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Readers-MemoryReader.html#method___construct">__construct()</a>
+    <a href="classes/Bencodex-Readers-StreamReader.html#method___construct">__construct()</a>
     <span>
                         &nbsp;: void    </span>
 </dt>
-<dd>Creates a {@see MemoryWriter} instance.</dd>
+<dd>Creates a new {@see StreamReader} instance with the given handle.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Readers-MemoryReader.html#method_read">read()</a>
+    <a href="classes/Bencodex-Readers-StreamReader.html#method_read">read()</a>
     <span>
                         &nbsp;: string    </span>
 </dt>
 <dd>Reads a chunk of bytes.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Readers-MemoryReader.html#method_seek">seek()</a>
+    <a href="classes/Bencodex-Readers-StreamReader.html#method_seek">seek()</a>
     <span>
                         &nbsp;: void    </span>
 </dt>
 <dd>Fast-forwards or rewinds the offset.</dd>
 
             <dt class="phpdocumentor-table-of-contents__entry -method -public">
-    <a href="classes/Bencodex-Readers-MemoryReader.html#method_tell">tell()</a>
+    <a href="classes/Bencodex-Readers-StreamReader.html#method_tell">tell()</a>
     <span>
                         &nbsp;: int    </span>
 </dt>
@@ -188,7 +188,7 @@ multiple chunks.</dd>
             <section class="phpdocumentor-methods">
         <h3 class="phpdocumentor-elements__header" id="methods">
             Methods
-            <a href="classes/Bencodex-Readers-MemoryReader.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
+            <a href="classes/Bencodex-Readers-StreamReader.html#methods" class="headerlink"><i class="fas fa-link"></i></a>
         </h3>
                     <article
         class="phpdocumentor-element
@@ -198,30 +198,31 @@ multiple chunks.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="method___construct">
         __construct()
-        <a href="classes/Bencodex-Readers-MemoryReader.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Bencodex-Readers-StreamReader.html#method___construct" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/MemoryReader.php"><a href="files/src-readers-memoryreader.html"><abbr title="src/Readers/MemoryReader.php">MemoryReader.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/StreamReader.php"><a href="files/src-readers-streamreader.html"><abbr title="src/Readers/StreamReader.php">StreamReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">30</span>
+    <span class="phpdocumentor-element-found-in__line">19</span>
 
     </aside>
 
-        <p class="phpdocumentor-summary">Creates a {@see MemoryWriter} instance.</p>
+        <p class="phpdocumentor-summary">Creates a new {@see StreamReader} instance with the given handle.</p>
 
     <code class="phpdocumentor-code phpdocumentor-signature ">
     <span class="phpdocumentor-signature__visibility">public</span>
-                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">string&nbsp;</span><span class="phpdocumentor-signature__argument__name">$buffer</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
+                <span class="phpdocumentor-signature__name">__construct</span><span>(</span><span class="phpdocumentor-signature__argument"><span class="phpdocumentor-signature__argument__return-type">resource&nbsp;</span><span class="phpdocumentor-signature__argument__name">$handle</span></span><span>)</span><span> : </span><span class="phpdocumentor-signature__response_type">void</span></code>
 
     
         <h5 class="phpdocumentor-argument-list__heading">Parameters</h5>
     <dl class="phpdocumentor-argument-list">
                     <dt class="phpdocumentor-argument-list__entry">
-                <span class="phpdocumentor-signature__argument__name">$buffer</span>
-                : <span class="phpdocumentor-signature__argument__return-type">string</span>
+                <span class="phpdocumentor-signature__argument__name">$handle</span>
+                : <span class="phpdocumentor-signature__argument__return-type">resource</span>
                             </dt>
             <dd class="phpdocumentor-argument-list__definition">
-                    <section class="phpdocumentor-description"><p>The input bytes to be consumed later.</p>
+                    <section class="phpdocumentor-description"><p>The pointer resource which refers a readable
+stream, usually a file.</p>
 </section>
 
             </dd>
@@ -239,7 +240,7 @@ multiple chunks.</dd>
                 <dd class="phpdocumentor-tag-list__definition">
                                                                 <span class="phpdocumentor-tag-link"><abbr title="\TypeError">TypeError</abbr></span>
                                                             
-                                                 <section class="phpdocumentor-description"><p>Thrown when the buffer is not a string.</p>
+                                                 <section class="phpdocumentor-description"><p>Thrown when the given handle is not a resource.</p>
 </section>
 
                                     </dd>
@@ -259,12 +260,12 @@ multiple chunks.</dd>
 >
     <h4 class="phpdocumentor-element__name" id="method_read">
         read()
-        <a href="classes/Bencodex-Readers-MemoryReader.html#method_read" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Bencodex-Readers-StreamReader.html#method_read" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/MemoryReader.php"><a href="files/src-readers-memoryreader.html"><abbr title="src/Readers/MemoryReader.php">MemoryReader.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/StreamReader.php"><a href="files/src-readers-streamreader.html"><abbr title="src/Readers/StreamReader.php">StreamReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">44</span>
+    <span class="phpdocumentor-element-found-in__line">31</span>
 
     </aside>
 
@@ -321,12 +322,12 @@ size if there is not enough bytes to read.</p>
 >
     <h4 class="phpdocumentor-element__name" id="method_seek">
         seek()
-        <a href="classes/Bencodex-Readers-MemoryReader.html#method_seek" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Bencodex-Readers-StreamReader.html#method_seek" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/MemoryReader.php"><a href="files/src-readers-memoryreader.html"><abbr title="src/Readers/MemoryReader.php">MemoryReader.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/StreamReader.php"><a href="files/src-readers-streamreader.html"><abbr title="src/Readers/StreamReader.php">StreamReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">70</span>
+    <span class="phpdocumentor-element-found-in__line">56</span>
 
     </aside>
 
@@ -384,12 +385,12 @@ the end of the entire buffer.</p>
 >
     <h4 class="phpdocumentor-element__name" id="method_tell">
         tell()
-        <a href="classes/Bencodex-Readers-MemoryReader.html#method_tell" class="headerlink"><i class="fas fa-link"></i></a>
+        <a href="classes/Bencodex-Readers-StreamReader.html#method_tell" class="headerlink"><i class="fas fa-link"></i></a>
     </h4>
     <aside class="phpdocumentor-element-found-in">
-    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/MemoryReader.php"><a href="files/src-readers-memoryreader.html"><abbr title="src/Readers/MemoryReader.php">MemoryReader.php</abbr></a></abbr>
+    <abbr class="phpdocumentor-element-found-in__file" title="src/Readers/StreamReader.php"><a href="files/src-readers-streamreader.html"><abbr title="src/Readers/StreamReader.php">StreamReader.php</abbr></a></abbr>
     :
-    <span class="phpdocumentor-element-found-in__line">62</span>
+    <span class="phpdocumentor-element-found-in__line">48</span>
 
     </aside>
 
@@ -502,7 +503,7 @@ the end of the entire buffer.</p>
 </section>
             </div>
         </div>
-        <a href="classes/Bencodex-Readers-MemoryReader.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
+        <a href="classes/Bencodex-Readers-StreamReader.html#top" class="phpdocumentor-back-to-top"><i class="fas fa-chevron-circle-up"></i></a>
 
     </main>
 

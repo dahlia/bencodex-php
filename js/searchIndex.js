@@ -186,6 +186,31 @@ Search.appendIndex(
             "summary": "Fast\u002Dforwards\u0020or\u0020rewinds\u0020the\u0020offset.",
             "url": "classes/Bencodex-Readers-Reader.html#method_seek"
         },                {
+            "fqsen": "\\Bencodex\\Readers\\StreamReader",
+            "name": "StreamReader",
+            "summary": "A\u0020stream\u0020reader,\u0020which\u0020usually\u0020refers\u0020to\u0020a\u0020file.",
+            "url": "classes/Bencodex-Readers-StreamReader.html"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\StreamReader\u003A\u003A__construct\u0028\u0029",
+            "name": "__construct",
+            "summary": "Creates\u0020a\u0020new\u0020\u007B\u0040see\u0020StreamReader\u007D\u0020instance\u0020with\u0020the\u0020given\u0020handle.",
+            "url": "classes/Bencodex-Readers-StreamReader.html#method___construct"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\StreamReader\u003A\u003Aread\u0028\u0029",
+            "name": "read",
+            "summary": "Reads\u0020a\u0020chunk\u0020of\u0020bytes.",
+            "url": "classes/Bencodex-Readers-StreamReader.html#method_read"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\StreamReader\u003A\u003Atell\u0028\u0029",
+            "name": "tell",
+            "summary": "Gets\u0020the\u0020current\u0020offset\u0020in\u0020the\u0020buffer.",
+            "url": "classes/Bencodex-Readers-StreamReader.html#method_tell"
+        },                {
+            "fqsen": "\\Bencodex\\Readers\\StreamReader\u003A\u003Aseek\u0028\u0029",
+            "name": "seek",
+            "summary": "Fast\u002Dforwards\u0020or\u0020rewinds\u0020the\u0020offset.",
+            "url": "classes/Bencodex-Readers-StreamReader.html#method_seek"
+        },                {
             "fqsen": "\\Bencodex\\Writers\\MemoryWriter",
             "name": "MemoryWriter",
             "summary": "A\u0020writer\u0020that\u0020copies\u0020the\u0020given\u0020byte\u0020string\u0020into\u0020an\u0020in\u002Dmemory\u0020buffer\u0020and\nallows\u0020to\u0020get\u0020the\u0020written\u0020byte\u0020string\u0020from\u0020the\u0020buffer.",
