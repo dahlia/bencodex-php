@@ -67,17 +67,17 @@ class MemoryReader implements Reader
     /**
      * @inheritDoc
      */
-    public function seek($size)
+    public function seek($offset)
     {
-        if (!is_int($size)) {
+        if (!is_int($offset)) {
             throw new \TypeError(
-                'Expected an integer, not ' . gettype($size) . '.'
+                'Expected an integer, not ' . gettype($offset) . '.'
             );
         }
-        if ($size < 0 && $this->offset < -$size) {
+        if ($offset < 0 && $this->offset < -$offset) {
             $this->offset = 0;
         } else {
-            $this->offset += $size;
+            $this->offset += $offset;
             if ($this->offset > strlen($this->buffer)) {
                 $this->offset = strlen($this->buffer);
             }

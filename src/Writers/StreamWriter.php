@@ -15,6 +15,7 @@ class StreamWriter implements Writer
      * @param resource $handle The pointer resource which refers a writable
      *                         stream, usually a file.
      * @return void
+     * @throws \TypeError Thrown when the given handle is not a resource.
      */
     public function __construct($handle)
     {

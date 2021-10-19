@@ -14,6 +14,7 @@ class StreamReader implements Reader
      * @param resource $handle The pointer resource which refers a readable
      *                         stream, usually a file.
      * @return void
+     * @throws \TypeError Thrown when the given handle is not a resource.
      */
     public function __construct($handle)
     {
@@ -52,19 +53,19 @@ class StreamReader implements Reader
     /**
      * @inheritDoc
      */
-    public function seek($size)
+    public function seek($offset)
     {
-        if (!is_int($size)) {
+        if (!is_int($offset)) {
             throw new \TypeError(
-                'Expected an integer, not ' . gettype($size) . '.'
+                'Expected an integer, not ' . gettype($offset) . '.'
             );
         }
-        if ($size > 0) {
-            fread($this->handle, $size);
+        if ($offset > 0) {
+            fread($this->handle, $offset);
             return;
         }
-        if ($size < 0) {
-            fseek($this->handle, $size, SEEK_CUR);
+        if ($offset < 0) {
+            fseek($this->handle, $offset, SEEK_CUR);
         }
     }
 }

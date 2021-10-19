@@ -26,7 +26,7 @@ interface Reader
 
     /**
      * Fast-forwards or rewinds the offset.
-     * @param int $size The number of bytes to move the offset pointer.
+     * @param int $offset The number of bytes to move the offset pointer.
      *                  Negative integers rewind and positive integers
      *                  fast-forward.  (Zero is no-op.)
      *                  If the destination is less than zero or greater than
@@ -35,5 +35,5 @@ interface Reader
      * @return void
      * @throws \TypeError Thrown when the size is not an integer.
      */
-    public function seek($size);
+    public function seek($offset);
 }
