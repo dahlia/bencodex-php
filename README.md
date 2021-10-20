@@ -72,14 +72,16 @@ Type correspondences
 Usage
 -----
 
-- `\Bencodex\encode(mixed $value): string`: Encodes a PHP `$value` into Bencodex
-  data.
-- `\Bencodex\decode(string $bencodex): mixed`: Decodes Bencodex data into a PHP
-  value.
+- [`\Bencodex\encode(mixed $value): string`][encode]: Encodes a PHP `$value`
+  into Bencodex data.
+- [`\Bencodex\decode(string $bencodex): mixed`][decode]: Decodes Bencodex data
+  into a PHP value.
 
 The above APIs are merely façade, and optional parameters are omitted.
 See the [complete API docs][1] as well.
 
+[encode]: https://dahlia.github.io/bencodex-php/namespaces/bencodex.html#function_encode
+[decode]: https://dahlia.github.io/bencodex-php/namespaces/bencodex.html#function_decode
 [1]: https://dahlia.github.io/bencodex-php/
 
 
