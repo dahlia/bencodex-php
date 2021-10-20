@@ -2,10 +2,12 @@ Bencodex reader/writer for PHP
 ==============================
 
 [![Packagist Version][]][Packagist]
+[![MIT License][]](LICENSE)
 [![GitHub Actions Status][]][GitHub Actions]
 
 [Packagist]: https://packagist.org/packages/bencodex/bencodex
-[Packagist Version]: https://img.shields.io/packagist/v/bencodex/bencodex
+[Packagist Version]: http://poser.pugx.org/bencodex/bencodex/v
+[MIT License]: http://poser.pugx.org/bencodex/bencodex/license
 [GitHub Actions Status]: https://github.com/dahlia/bencodex-php/actions/workflows/build.yaml/badge.svg
 [GitHub Actions]: https://github.com/dahlia/bencodex-php/actions/workflows/build.yaml
 
@@ -33,9 +35,12 @@ object(stdClass)#4 (2) {
 Requirements
 ------------
 
+[![PHP Version Requirement][]][Packagist]
+
 - PHP 5.4 or later
 - [iconv] extension (`--with-iconv`)
 
+[PHP Version Requirement]: http://poser.pugx.org/bencodex/bencodex/require/php
 [iconv]: https://www.php.net/manual/en/book.iconv.php
 
 
