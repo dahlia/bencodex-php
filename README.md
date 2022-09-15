@@ -52,19 +52,17 @@ Type correspondences
 | Null                                   | Null                      |
 | Boolean                                | Boolean                   |
 | Integer                                | Integer                   |
-| Double<sup>†</sup>                     | Integer (truncated)       |
-| Numeric string<sup>‡</sup>             | Integer ≥ [`PHP_INT_MAX`] |
-| String which can be decoded as Unicode | Text<sup>‡</sup>          |
-| String otherwise                       | Binary<sup>‡</sup>        |
-| List-like array<sup>※</sup>            | List                      |
-| Map-like array<sup>†</sup>             | Dictionary                |
+| Double[^1]                             | Integer (truncated)       |
+| Numeric string[^2]                     | Integer ≥ [`PHP_INT_MAX`] |
+| String which can be decoded as Unicode | Text[^2]                  |
+| String otherwise                       | Binary[^2]                |
+| List-like array[^3]                    | List                      |
+| Map-like array[^1]                     | Dictionary                |
 | Object                                 | Dictionary                |
 
-*† One-way types only available for encoding.*
-
-*‡ One-way types only available for decoding.*
-
-*※ Determined by [`array_is_list()` function][array_is_list].*
+[^1]: One-way types only available for encoding.
+[^2]: One-way types only available for decoding.
+[^3]: Determined by [`array_is_list()` function][array_is_list].
 
 [array_is_list]: https://www.php.net/manual/en/function.array-is-list
 [`PHP_INT_MAX`]: https://www.php.net/manual/en/reserved.constants.php#constant.php-int-max
